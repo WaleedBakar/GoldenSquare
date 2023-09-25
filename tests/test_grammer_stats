@@ -1,0 +1,12 @@
+from lib.grammer_stats import grammer_stats
+
+def test_grammar_stats():
+    stats = GrammarStats()
+
+    # Test with a valid sentence
+    stats.check("This is a valid sentence.")
+    assert stats.percentage_good() == 100
+
+    # Test with an invalid sentence
+    stats.check("invalid text")
+    assert stats.percentage_good() == 50  # One out of two texts passed
