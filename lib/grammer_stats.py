@@ -12,5 +12,5 @@ class GrammarStats:
 
     def percentage_good(self):
         if self.total_checked == 0:
-            return 0
-        return (self.passed_checks / self.total_checked) * 100
+            return 0.0
+        return (self.passed_checks / self.total_checked) * 100.0
